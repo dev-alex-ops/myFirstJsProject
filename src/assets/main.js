@@ -1,7 +1,3 @@
-const dotenv= require('dotenv')
-dotenv.config()
-const rapidApiKey = process.env['RAPIDAPI_KEY']
-
 const API = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UCFkPAM4WaU9N8mdI55oXU3g&hl=es&gl=ES';
 
 const content = document.getElementById('content')
@@ -9,7 +5,7 @@ const content = document.getElementById('content')
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': rapidApiKey,
+        'X-RapidAPI-Key': '9fef2eba3amsh9984d19e0388fe0p1d02afjsn7e0c7e0c5159',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
@@ -23,7 +19,6 @@ async function fetchData (apiUrl) {
 (async () => {
     try {
         const videos = await fetchData(API)
-        console.log(videos)
         let view = `
         ${videos.contents.map(video => `
             <a target=_blank href="https://youtube.com/watch?v=${video.video.videoId}">
