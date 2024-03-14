@@ -1,0 +1,258 @@
+:root{
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #23283070;
+    --dark-blue: #304052;
+    --text-input-field: #F7F7F7;
+    --sky-blue: #eeeee4;
+    --ss: 14px;
+    --ms: 16px;
+    --ls: 18px;
+    --xls: 35px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body{
+    background-color: var(--dark-blue);
+    color: var(--sky-blue);
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+}
+
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:100px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-bottom: 2px solid var(--sky-blue);
+    justify-items: center;
+    background-color: var(--black);
+    color: var(--sky-blue);
+    position: sticky;
+    top: 0;
+}
+
+.main-logo {
+    display: flex;
+    position: relative;
+    top: 25%;
+    right: 30%;
+}
+
+.main-logo img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.main-logo {
+    display: flex;
+    width: 30%;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.website-title {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.open-nav {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.closed-nav {
+    display: none;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    list-style: none;
+    justify-content: right;
+    align-content: center;
+    align-items: end;
+}
+
+.nav-list li {
+    font-size: var(--ss);
+    margin: 0 auto;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+.nav-list li:hover {
+    background-color: var(--sky-blue);
+    color: black;
+    transition: 0.6s;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 20fr 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+.hoverable {
+    background-color: var(--dark);
+    border-radius: 10px; 
+    margin-top: 60px;
+    box-shadow: 10px 10px 10px #304052;
+    transition: 0.4s;
+}
+
+.hoverable:hover {
+    box-shadow: 10px 10px 10px black;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.about-me { 
+    grid-area: 1 / 2 / 2 / 3;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-me img { 
+    height: 80%;
+    margin: 5px 50px;
+    border-radius: 10px;
+}
+
+
+.bio {
+    padding: 70px;
+}
+
+.last-videos {
+    grid-area: 2 / 2 / 3 / 3; 
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.single-video {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-blue);
+    width: 80%;
+    padding: 20px;
+    margin-inline: 10px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.single-video:hover {
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.single-video img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.single-video p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--sky-blue);
+}
+
+.last-videos h2 {
+    font-size: var(--xls);
+}
+
+
+.comments {
+    grid-area: 3 / 2 / 4 / 3; 
+    height: 50vh;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comments h2 {
+    font-size: var(--xls);
+}
+
+.main-footer {
+    background-color: #000000;
+    color: var(--sky-blue);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid var(--sky-blue);
+}
+
+.section {
+    padding: 5px;
+}
+
+.main-footer div p {
+    font-size: var(--ss)
+}
+
+.separator {
+    height: 90px;
+    border: 1px solid #eeeee4be;
+}
+
+.main-footer div p:nth-child(1) {
+    font-size: var(--ms);
+    font-weight: 700;
+}
+
+.main-footer div p:nth-child(3) {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .open-nav {
+        display: none;
+    }
+
+    .closed-nav {
+        display: block;
+        position: relative;
+        left: 70%
+    }
+
+}
+
