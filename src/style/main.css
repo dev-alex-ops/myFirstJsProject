@@ -117,7 +117,7 @@ body{
 .hoverable {
     background-color: var(--dark);
     border-radius: 10px; 
-    margin-top: 60px;
+    margin: 60px 0;
     box-shadow: 10px 10px 10px #304052;
     transition: 0.4s;
 }
@@ -128,23 +128,31 @@ body{
     cursor: pointer;
 }
 
-.about-me { 
+.about-me {
     grid-area: 1 / 2 / 2 / 3;
     height: 50vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    height: 90%;
 }
 
-.about-me img { 
-    height: 80%;
+.photo {
+    display: flex;
+    margin: 40px 0;
+}
+
+.photo img {
     margin: 5px 50px;
     border-radius: 10px;
 }
 
-
 .bio {
     padding: 70px;
+}
+
+.subtitle {
+    text-align: center;
+    width: 100%;
 }
 
 .last-videos {
@@ -153,11 +161,14 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 90%;
+    min-height: 350px;
 }
 
 .video-flex {
     display: flex;
     flex-direction: row;
+    width: 90%;
 }
 
 .single-video {
@@ -254,5 +265,22 @@ a {
         left: 70%
     }
 
+    .hoverable {
+        flex-direction: column;
+    }
+
+    .photo {
+        justify-content: center;
+    }
+
+    .video-flex {
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .single-video {
+        margin-bottom: 50px;
+        height: 270px;
+    }
 }
 

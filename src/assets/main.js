@@ -5,7 +5,7 @@ const content = document.getElementById('content')
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'Wooops! What are you searching for? B)',
+        'X-RapidAPI-Key': '9fef2eba3amsh9984d19e0388fe0p1d02afjsn7e0c7e0c515',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
     }
 };
